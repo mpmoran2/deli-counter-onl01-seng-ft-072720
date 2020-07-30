@@ -2,12 +2,12 @@ katz_deli = []
 
 #line time
 def line(x)
-  line_array = []
+  in_line = []
   if x.length == 0
     puts "The line is currently empty."
   else
     x.each.with_index(1) do |name, index|
-      line_array.push("#{index}. #{name}")
+      in_line.push("#{index}. #{name}")
     end
     puts "The line is currently: #{line_array.join(" ")}"
   end
