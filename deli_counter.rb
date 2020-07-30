@@ -1,13 +1,16 @@
 katz_deli = []
 
 #line time
-def line(katz_deli)
-	if katz_deli.empty?
-		puts "The line is currently empty."
-	else
-	  #pulling from the array
-		puts "The line is currently: 1. #{katz_deli[0]} 2. #{katz_deli[1]} 3. #{katz_deli[2]}"
-	end
+def line(x)
+  line_array = []
+  if x.length == 0
+    puts "The line is currently empty."
+  else
+    x.each.with_index(1) do |name, index|
+      line_array.push("#{index}. #{name}")
+    end
+    puts "The line is currently: #{line_array.join(" ")}"
+  end
 end
 
 def take_a_number(katz_deli, name)
